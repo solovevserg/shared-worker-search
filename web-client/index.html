@@ -5,6 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        html {
+            padding: 20px;
+            background: #000428; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #000428, #004e92); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+
+        body {
+            max-width: 800px;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        input {
+            padding: 10px 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
   </head>
   <body>
     <h1>Список пользователей</h1>
@@ -29,12 +60,12 @@
           listElem.appendChild(liElem);
         }
         const resultElem = document.getElementById("result");
-        resultElem.innerText = `Найдено ${count}, отображено ${users.length}`;
+        resultElem.innerHTML = `Найдено ${count}, отображено ${users.length}`;
         if (cached) {
-          resultElem.innerText += `, Закешировано: ${cached.toISOString()}`;
+          resultElem.innerHTML += `<br>Закешировано: ${cached.toISOString()}`;
         }
         if (ms) {
-          resultElem.innerText += `, Время поиска: ${ms / 1000}с`;
+          resultElem.innerHTML += `,<br>Время поиска: ${ms / 1000}с`;
         }
       }
 
