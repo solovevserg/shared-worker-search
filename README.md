@@ -1,4 +1,4 @@
-# Express + Web Worker
+# Shared Web Worker Search
 
 ## Цель
 
@@ -12,3 +12,12 @@
 4. Научить основной поток (вкладку) обращаться к воркеру для поиска данных
 5. Добавить интерактивный ввод запроса в поле
 6. Добавить кеш ответов на запросы на стороне воркера
+
+## Как запустить
+
+```bash
+git clone https://github.com/solovevserg/shared-worker-search
+cd server
+npm i
+npm start
+```
